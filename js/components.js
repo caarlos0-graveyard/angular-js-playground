@@ -21,15 +21,16 @@ angular.module('components', []).
           panes.push(pane);
         };
       },
-      template:
-        '<div class="tabable">' +
-          '<ul class="nav nav-tabs">' +
-            '<li ng-repeat="pane in panes" ng-class="{active:pane.selected}">' +
-              '<a href="" ng-click="select(pane)">{{pane.title}}</a>' +
-            '</li>' +
-          '</ul>' +
-          '<div class="tab-content" ng-transclude></div>' +
-        '</div>',
+      templateUrl: 'partials/tabs.html',
+      // template:
+      //   '<div class="tabable">' +
+      //     '<ul class="nav nav-tabs">' +
+      //       '<li ng-repeat="pane in panes" ng-class="{active:pane.selected}">' +
+      //         '<a href="" ng-click="select(pane)">{{pane.title}}</a>' +
+      //       '</li>' +
+      //     '</ul>' +
+      //     '<div class="tab-content" ng-transclude></div>' +
+      //   '</div>',
       replace: true
     };
   }).
@@ -42,9 +43,10 @@ angular.module('components', []).
       link: function(scope, element, attrs, tabsCtrl) {
         tabsCtrl.addPane(scope);
       },
-      template:
-        '<div class="tab-pane" ng-class="{active: selected}" ng-transclude>' +
-        '</div>',
+      templateUrl: 'partials/pane.html',
+      // template:
+      //   '<div class="tab-pane" ng-class="{active: selected}" ng-transclude>' +
+      //   '</div>',
       replace: true
     };
   });
