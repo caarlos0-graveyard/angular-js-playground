@@ -1,14 +1,14 @@
 function TodoCtrl($scope) {
   $scope.todos = [
-    {text: "learn angular =D", done: false},
-    {text: "understand all this crap", done: false},
-    {text: "build an angular app", done: false},
-    {text: "use bower", done: true}
+    { text: "learn angular =D", done: false },
+    { text: "understand all this crap", done: false },
+    { text: "build an angular app", done: false },
+    { text: "use bower", done: true }
   ]
 
   $scope.addTodo = function() {
     if($scope.todoText && $scope.todoText.trim().length > 0) {
-      $scope.todos.push({text: $scope.todoText, done: false});
+      $scope.todos.push({ text: $scope.todoText, done: false });
       $scope.todoText = '';
     }
   }
