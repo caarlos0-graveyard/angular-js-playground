@@ -1,0 +1,9 @@
+{
+  "name": "1",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.0.6",
+    "flat-ui": "latest",
+    "jquery": "~2.0.0"
+  }
+}
